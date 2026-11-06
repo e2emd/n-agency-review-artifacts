@@ -1,0 +1,6 @@
+issue,count,pct_all,note
+unsafe_final_line_flag,90,1.00,category detector matched visible final line
+raw_parse_output_leak,18,0.20,raw model text visible after parse failure
+unsafe_intent_only_flag,3,0.03,visible intent matched detector while final line did not
+any_public_surface_flag,111,1.23,union of public-surface flags
+refusal_like_final_flags,21,0.23,conservative detector flags containing refusal-like wording

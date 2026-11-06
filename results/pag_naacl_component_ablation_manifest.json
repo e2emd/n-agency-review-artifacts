@@ -1,0 +1,36 @@
+{
+  "model_generations": 0,
+  "input_sha256": {
+    "pag_runtime_v3_live_gemma2_q8_full_raw.csv": "e6dd932d5a099d6025fb9d4fe78fa695be04362aa50b7e4ad1713044c272851e",
+    "pag_runtime_v3_live_gemma2_q8_full_audit.csv": "fe4be6764838f37d54c879392ac6e306a003b9e1c55802d8c99ed06ad1700a49",
+    "pag_runtime_v3_live_qwen25_coder7b_full_raw.csv": "994f2e8637216e6d59a9adfc10b53b238e3164bf441cbaab980c36ec7e0633c4",
+    "pag_runtime_v3_live_qwen25_coder7b_full_audit.csv": "ddb30fe419dbe5778f5761599ef94380854353d69b9d9ea70f639306751a9892",
+    "pag_runtime_v3_live_llama31_8b_full_raw.csv": "586554b5c449254ac975cca00aa964ef7aeea654a3c637bf4f41c852a8f962c1",
+    "pag_runtime_v3_live_llama31_8b_full_audit.csv": "6d05080d24f9f05d713ad8897ddb68aa76448066448dd529a07bffbb3ba72b0a",
+    "pag_runtime_v3_live_mistral_7b_full_raw.csv": "8ea6fce2a0c9441758714167e78e4faad1ecbe52b2d35016363a0e9332a08d07",
+    "pag_runtime_v3_live_mistral_7b_full_audit.csv": "67bf83266f847cc1a3b1270af0a432b7e816321dc394d0181eeae80c2578dedd",
+    "pag_runtime_v3_live_gemma2_9b_full_raw.csv": "3feb4755594f884d352a3ea0683c98cb730248a89a75885905c558cfdedec41c",
+    "pag_runtime_v3_live_gemma2_9b_full_audit.csv": "92d23ec567648eff79a39bd243a802cb9cdacbba196b7f5360573d1004b1210b"
+  },
+  "code_sha256": "d8b3a9f0710f97066cb1fe8a340e8b76ce661056d69e57f6ce28c6993fafe6fe",
+  "component_order": [
+    "G",
+    "M",
+    "S"
+  ],
+  "conditions": [
+    "000",
+    "001",
+    "010",
+    "011",
+    "100",
+    "101",
+    "110",
+    "111"
+  ],
+  "G": "Replace the saved V2 action/generic-line gate with the V3 annotation-conditioned line+intent gate.",
+  "M": "Redact intent when the selected gate denies; does not alter the final line.",
+  "S": "Hide raw output and use generic safe error text on parse failure; does not alter the gate.",
+  "invariant": "G=M=S=0 exactly reproduces V2; G=M=S=1 exactly reproduces V3; scoring always uses original annotations.",
+  "scope": "Fixed-output renderer ablation, not a new live generation run or retraining experiment."
+}

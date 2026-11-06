@@ -1,0 +1,11 @@
+model,metric,mean_pct,min_pct,max_pct,span_pp
+Gemma2 2B Q8,nonrefusal_count,5.0,0.0,12.0,12.0
+Gemma2 2B Q8,intent_count,57.25,13.0,88.0,75.0
+Qwen2.5 7B,nonrefusal_count,6.25,0.0,12.0,12.0
+Qwen2.5 7B,intent_count,49.5,19.0,93.0,74.0
+Llama3.1 8B,nonrefusal_count,41.5,18.0,66.0,48.0
+Llama3.1 8B,intent_count,72.0,24.0,100.0,76.0
+Mistral 7B,nonrefusal_count,22.0,13.0,41.0,28.0
+Mistral 7B,intent_count,62.5,24.0,98.0,74.0
+Gemma2 9B,nonrefusal_count,30.25,17.0,47.0,30.0
+Gemma2 9B,intent_count,87.75,59.0,100.0,41.0

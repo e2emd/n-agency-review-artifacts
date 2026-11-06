@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="N/Agency++: a framework for auditing the public surface of user-facing LLM agents through Permissioned Action Generation.">
+  <meta name="theme-color" content="#006c7b">
+  <meta property="og:title" content="N/Agency++">
+  <meta property="og:description" content="Auditing the Public Surface of User-Facing LLM Agents">
+  <meta property="og:type" content="website">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:image" content="assets/main-figure.png">
+  <link rel="stylesheet" href="style.css">
+  <title>N/Agency++ | Public-Surface Auditing</title>
+  <script defer src="assets/lucide.min.js"></script>
+  <script defer src="page.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#abstract">Skip to abstract</a>
+  <main>
+    <header class="paper-heading">
+      <p class="eyebrow">Permissioned Action Generation</p>
+      <h1>N/Agency<span>++</span></h1>
+      <p class="paper-title">Auditing the Public Surface of<br class="desktop-break"> User-Facing LLM Agents</p>
+      <nav class="resources" aria-label="Research resources">
+        <a class="resource primary" href="#abstract">
+          <i data-lucide="file-text" aria-hidden="true"></i><span>Abstract</span>
+        </a>
+        <a class="resource" href="../research/" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="code-2" aria-hidden="true"></i><span>Code</span>
+        </a>
+      </nav>
+    </header>
+
+    <figure class="framework" aria-labelledby="framework-caption">
+      <div class="figure-toolbar">
+        <span>Figure 1 · Runtime audit trade-offs</span>
+        <button class="icon-button" id="open-figure" type="button" aria-label="Enlarge Figure 1" title="Enlarge figure" hidden>
+          <i data-lucide="maximize-2" aria-hidden="true"></i>
+        </button>
+      </div>
+      <a href="assets/main-figure.pdf" target="_blank" rel="noopener" aria-label="Open Figure 1 as a vector PDF">
+        <img src="assets/main-figure.png" width="2557" height="1122" alt="Figure 1. Left: measured exposure and denied-prompt residuals. Center: the V3 latency-policy trade-off across five backbones. Right: a conceptual inference distribution transformed into a rendered public surface." fetchpriority="high">
+      </a>
+      <figcaption id="framework-caption">Runtime audit trade-offs: public exposure, residual policy behavior, and local generation latency. The distribution panel is schematic.</figcaption>
+    </figure>
+
+    <section class="abstract" id="abstract" aria-labelledby="abstract-heading">
+      <h2 id="abstract-heading">Abstract</h2>
+      <p id="abstract-text">User-facing LLM agents render intermediate state and error fallbacks alongside final answers, creating disclosure paths that answer-only audits miss. We present N/Agency++ (Negotiated Agency++), a framework extending Permissioned Action Generation (PAG) through oracle permission, public-surface auditing, and field-level control. A local llama.cpp/Godot study evaluates five GGUF models on 600 prompts across three runs: 9,000 generations and 27,000 audit views. Expanding the audit boundary raises measured exposure from 1.00% to 1.23%. A benchmark-conditioned V3 controller reduces detector-flagged exposure to 0.00% and raises whole-request audit pass from 33.23% to 56.03%, preserving all 3,000 allowed final lines. Paired replay and timing analyses connect containment, policy residuals, and runtime cost to deployment regression testing.</p>
+    </section>
+  </main>
+  <footer><span>N/Agency++</span><a href="../README.md">Research artifacts <i data-lucide="arrow-up-right" aria-hidden="true"></i></a></footer>
+
+  <dialog id="figure-dialog" aria-labelledby="figure-dialog-title">
+    <div class="dialog-toolbar">
+      <h2 id="figure-dialog-title">Figure 1 · Runtime audit trade-offs</h2>
+      <div>
+        <a class="icon-button" href="assets/main-figure.pdf" target="_blank" rel="noopener" aria-label="Open vector PDF" title="Open vector PDF"><i data-lucide="file-text" aria-hidden="true"></i></a>
+        <button class="icon-button" id="close-figure" type="button" aria-label="Close figure" title="Close"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+    </div>
+    <div class="figure-viewport"><img src="assets/main-figure.png" width="2557" height="1122" alt="Enlarged Figure 1: exposure and residuals on the left, latency-policy results in the center, and conceptual inference distribution on the right."></div>
+  </dialog>
+</body>
+</html>

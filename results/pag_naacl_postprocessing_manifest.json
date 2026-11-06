@@ -1,0 +1,42 @@
+{
+  "model_generations": 0,
+  "started_utc": "2026-10-31T15:19:08.338279+00:00",
+  "input_sha256": {
+    "pag_eval_llamacpp_gemma2_q8_full.csv": "b5e5669a5bb7a3c1477dfa71223e8eb44ab01a2edc7cef6551f5cbf8c97333fa",
+    "pag_eval_llamacpp_gemma2_q8_schema_policy_full.csv": "038a82275aa8b50b207ad6d697b57bda181f3bb98a4caa43cf8ed44d81b45777",
+    "pag_eval_llamacpp_qwen25_coder7b_full.csv": "67d7d8d7f4e173b127087423a7a055b875035f8037a67173580ffd2ee4aaf9c4",
+    "pag_eval_llamacpp_qwen25_coder7b_schema_policy_full.csv": "95a9f02307cb8b109aae2d4a74eada02c9a7f2d46d4b06407970af0c25eab6b2",
+    "pag_eval_llamacpp_llama31_8b_full.csv": "93b42ba551c60b06e41ad4de288f28d29dacc3392145aba55d7fca2ec246810f",
+    "pag_eval_llamacpp_llama31_8b_schema_policy_full.csv": "313d967efa05be5395bb7e47ac3f296f3e4fe636b40f0d64288e8c64f19ae0b6",
+    "pag_eval_llamacpp_mistral_7b_full.csv": "65de3c20870cd5743f77b590f50c103608b5629870a0ba20c36306505aa576be",
+    "pag_eval_llamacpp_mistral_7b_schema_policy_full.csv": "003b876d31c9c2f01f1cf66c019e63e9ecb670ac1bc1d5897dd3c2ecaf9aa1bf",
+    "pag_eval_llamacpp_gemma2_9b_full.csv": "92f2ae05f36c86759a8b50d6bd418924de10777682b115ca5e002c3cebb4d010",
+    "pag_eval_llamacpp_gemma2_9b_schema_policy_full.csv": "1988c994f5f3233a66b27c5f8412e6fdd168e2f54ab2242aab6334365ae0fae7"
+  },
+  "code_sha256": {
+    "naacl_postprocessing_benchmark.py": "75e61efb749b8d62aa1fab325928ea198382766e78f7c090d92ddcecdc4ff72d",
+    "naacl_family_ablation.py": "3e36242a0eedcb846973139aa2ca80d336590b80f14ff541d7a1fc81966993db",
+    "reanalyze_runtime_v2.py": "b2cc39a9e4b5b75ad5c4b5757345aebce2c1755d8fdf90d7d2fb034044eaad32",
+    "audit_runtime_v3.py": "2a854409a0edb5c9f2d1343e656140776320173bb7e4c8d5e0abe100e4aaf06e",
+    "eval_pag.py": "3d703332c3c1252c8a9813d53954c27988becbf113d288a622f213f3abea5336"
+  },
+  "equivalence_checked_views": 45000,
+  "unique_outputs": 27000,
+  "observations_per_variant": 9000,
+  "warmup_passes": 5,
+  "measured_passes": 30,
+  "seed": 20261101,
+  "cpu": "Intel(R) Core(TM) i5-7267U CPU @ 3.10GHz",
+  "os": "Darwin 22.6.0",
+  "python": "3.12.14",
+  "process_threads": 1,
+  "affinity_pinned": false,
+  "gc_enabled": true,
+  "timer": "perf_counter_ns (wall clock)",
+  "timer_resolution_s": 1e-09,
+  "timed_scope": "Python saved-output parsing, policy enforcement, public-field construction; V2 uses its existing separate policy parser.",
+  "excluded": "Model generation, network, disk I/O, evaluation-only scoring, GUI painting, and timed setup.",
+  "uncertainty": "SD and p05/p95 of 30 pass means, not per-request tail percentiles or confidence intervals.",
+  "comparability": "CPU replay timings are separate from the original GPU generation times; do not sum across devices or claim end-to-end deployment speed.",
+  "policy": "V3 retains its benchmark-conditioned guard; no changes to policy decisions or original outputs."
+}

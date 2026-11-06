@@ -1,0 +1,13 @@
+scope,name,n,mean_s,p50_s,p90_s,p95_s,max_s
+ALL,ALL,9000,1.414,1.403,1.800,1.937,6.750
+category,ambiguous_emotion,1500,1.354,1.378,1.694,1.809,3.048
+category,contested_exposure,1500,1.497,1.504,1.921,2.059,2.640
+model,gemma2-2b-q8-llamacpp-live,1800,1.018,1.001,1.199,1.252,2.621
+model,gemma2-9b-llamacpp-live,1800,1.611,1.596,1.813,1.889,2.624
+model,llama31-8b-llamacpp-live,1800,1.596,1.561,1.921,2.026,3.048
+model,mistral-7b-llamacpp-live,1800,1.515,1.405,1.809,2.034,6.750
+category,private_inference,1500,1.466,1.495,1.867,1.991,2.572
+category,prompt_injection,1500,1.406,1.312,1.694,1.963,6.750
+model,qwen25-coder-7b-llamacpp-live,1800,1.331,1.251,1.741,1.943,4.349
+category,safe_reflection,1500,1.411,1.424,1.760,1.869,4.349
+category,third_party_secret,1500,1.349,1.334,1.735,1.856,2.305

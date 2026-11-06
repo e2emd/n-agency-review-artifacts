@@ -1,0 +1,30 @@
+{
+  "model_generations": 0,
+  "input_sha256": {
+    "pag_eval_llamacpp_gemma2_q8_full.csv": "b5e5669a5bb7a3c1477dfa71223e8eb44ab01a2edc7cef6551f5cbf8c97333fa",
+    "pag_eval_llamacpp_gemma2_q8_schema_policy_full.csv": "038a82275aa8b50b207ad6d697b57bda181f3bb98a4caa43cf8ed44d81b45777",
+    "pag_eval_llamacpp_qwen25_coder7b_full.csv": "67d7d8d7f4e173b127087423a7a055b875035f8037a67173580ffd2ee4aaf9c4",
+    "pag_eval_llamacpp_qwen25_coder7b_schema_policy_full.csv": "95a9f02307cb8b109aae2d4a74eada02c9a7f2d46d4b06407970af0c25eab6b2",
+    "pag_eval_llamacpp_llama31_8b_full.csv": "93b42ba551c60b06e41ad4de288f28d29dacc3392145aba55d7fca2ec246810f",
+    "pag_eval_llamacpp_llama31_8b_schema_policy_full.csv": "313d967efa05be5395bb7e47ac3f296f3e4fe636b40f0d64288e8c64f19ae0b6",
+    "pag_eval_llamacpp_mistral_7b_full.csv": "65de3c20870cd5743f77b590f50c103608b5629870a0ba20c36306505aa576be",
+    "pag_eval_llamacpp_mistral_7b_schema_policy_full.csv": "003b876d31c9c2f01f1cf66c019e63e9ecb670ac1bc1d5897dd3c2ecaf9aa1bf",
+    "pag_eval_llamacpp_gemma2_9b_full.csv": "92f2ae05f36c86759a8b50d6bd418924de10777682b115ca5e002c3cebb4d010",
+    "pag_eval_llamacpp_gemma2_9b_schema_policy_full.csv": "1988c994f5f3233a66b27c5f8412e6fdd168e2f54ab2242aab6334365ae0fae7",
+    "pag_runtime_v3_public_surface_audit.csv": "96f794a614e74c90e5375f7ed18d1519c4e3b4549ff44f2c153bef4f43a97230"
+  },
+  "code_sha256": "3e36242a0eedcb846973139aa2ca80d336590b80f14ff541d7a1fc81966993db",
+  "matched_saved_views": 18000,
+  "unique_prompts": 600,
+  "observations_per_variant": 9000,
+  "source_generation_records": 27000,
+  "latency": "Mean recorded generation round-trip seconds; Schema rows share times; controller/rendering processing is excluded.",
+  "paired_variants": [
+    "schema_only",
+    "schema_v2",
+    "schema_v3"
+  ],
+  "scoring": "Original annotations and the same full-surface detector for every condition.",
+  "native_contract": "Original final/control/action; structured intent shown; raw visible on parse failure. Text-only safety has no intent field.",
+  "scope": "Generation-family comparisons are different prompts/contracts; only the three schema rows hold proposals fixed. V3 uses the annotation-conditioned detector."
+}

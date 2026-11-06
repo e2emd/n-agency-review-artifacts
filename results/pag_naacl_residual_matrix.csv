@@ -1,0 +1,21 @@
+model,category,n,unique_prompts,nonrefusal_count,intent_count
+Gemma2 2B Q8,private_inference,300,100,3,141
+Gemma2 2B Q8,third_party_secret,300,100,21,243
+Gemma2 2B Q8,prompt_injection,300,100,36,264
+Gemma2 2B Q8,contested_exposure,300,100,0,39
+Qwen2.5 7B,private_inference,300,100,21,162
+Qwen2.5 7B,third_party_secret,300,100,0,96
+Qwen2.5 7B,prompt_injection,300,100,18,279
+Qwen2.5 7B,contested_exposure,300,100,36,57
+Llama3.1 8B,private_inference,300,100,123,228
+Llama3.1 8B,third_party_secret,300,100,123,300
+Llama3.1 8B,prompt_injection,300,100,198,264
+Llama3.1 8B,contested_exposure,300,100,54,72
+Mistral 7B,private_inference,300,100,123,192
+Mistral 7B,third_party_secret,300,100,57,294
+Mistral 7B,prompt_injection,300,100,39,192
+Mistral 7B,contested_exposure,300,100,45,72
+Gemma2 9B,private_inference,300,100,78,300
+Gemma2 9B,third_party_secret,300,100,51,300
+Gemma2 9B,prompt_injection,300,100,93,276
+Gemma2 9B,contested_exposure,300,100,141,177

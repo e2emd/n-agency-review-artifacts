@@ -1,0 +1,118 @@
+{
+  "protocol_version": 5,
+  "model_generations": 0,
+  "baseline_views_matched": 9000,
+  "input_sha256": {
+    "pag_runtime_v3_live_gemma2_q8_full_raw.csv": "e6dd932d5a099d6025fb9d4fe78fa695be04362aa50b7e4ad1713044c272851e",
+    "pag_runtime_v3_live_gemma2_q8_full_audit.csv": "fe4be6764838f37d54c879392ac6e306a003b9e1c55802d8c99ed06ad1700a49",
+    "pag_runtime_v3_live_qwen25_coder7b_full_raw.csv": "994f2e8637216e6d59a9adfc10b53b238e3164bf441cbaab980c36ec7e0633c4",
+    "pag_runtime_v3_live_qwen25_coder7b_full_audit.csv": "ddb30fe419dbe5778f5761599ef94380854353d69b9d9ea70f639306751a9892",
+    "pag_runtime_v3_live_llama31_8b_full_raw.csv": "586554b5c449254ac975cca00aa964ef7aeea654a3c637bf4f41c852a8f962c1",
+    "pag_runtime_v3_live_llama31_8b_full_audit.csv": "6d05080d24f9f05d713ad8897ddb68aa76448066448dd529a07bffbb3ba72b0a",
+    "pag_runtime_v3_live_mistral_7b_full_raw.csv": "8ea6fce2a0c9441758714167e78e4faad1ecbe52b2d35016363a0e9332a08d07",
+    "pag_runtime_v3_live_mistral_7b_full_audit.csv": "67bf83266f847cc1a3b1270af0a432b7e816321dc394d0181eeae80c2578dedd",
+    "pag_runtime_v3_live_gemma2_9b_full_raw.csv": "3feb4755594f884d352a3ea0683c98cb730248a89a75885905c558cfdedec41c",
+    "pag_runtime_v3_live_gemma2_9b_full_audit.csv": "92d23ec567648eff79a39bd243a802cb9cdacbba196b7f5360573d1004b1210b"
+  },
+  "code_sha256": {
+    "naacl_deep_analysis.py": "70dda270b90d8dfc7414360f6560e1580edcbe16c04e5f63fb32b60205f8a107",
+    "audit_runtime_v3.py": "2a854409a0edb5c9f2d1343e656140776320173bb7e4c8d5e0abe100e4aaf06e",
+    "eval_pag.py": "3d703332c3c1252c8a9813d53954c27988becbf113d288a622f213f3abea5336",
+    "reanalyze_runtime_v2.py": "b2cc39a9e4b5b75ad5c4b5757345aebce2c1755d8fdf90d7d2fb034044eaad32"
+  },
+  "modes": {
+    "full": [],
+    "no_permission": [
+      "gold_permission"
+    ],
+    "no_category": [
+      "category"
+    ],
+    "no_context": [
+      "gold_permission",
+      "category"
+    ],
+    "deny_on_missing": [
+      "gold_permission",
+      "category"
+    ]
+  },
+  "omission_rates": [
+    0,
+    10,
+    25,
+    50,
+    75,
+    100
+  ],
+  "seeds": 100,
+  "seed_start": 20261031,
+  "evaluation_context": "Original, immutable gold_permission and category.",
+  "mask_unit": "Unique prompt; stratified by six categories; shared across all backbones and runs.",
+  "bands": "5th--95th percentiles across omission masks; not population confidence intervals.",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261101,
+    "unit": "600 unique prompts, resampled within each of six categories; all runs and models stay paired.",
+    "interval": "2.5th--97.5th bootstrap percentiles; empirical benchmark stability, not open-world risk bounds.",
+    "zero_events": "Degenerate zero-event intervals are omitted in the paper, not interpreted as a safety bound."
+  },
+  "identical_raw_outputs_across_three_runs_out_of_600": {
+    "Gemma2 2B Q8": 599,
+    "Qwen2.5 7B": 600,
+    "Llama3.1 8B": 600,
+    "Mistral 7B": 600,
+    "Gemma2 9B": 600
+  },
+  "changed_rows": 270,
+  "outputs": [
+    "residual_matrix",
+    "residual_summary",
+    "blindspots",
+    "context_endpoints",
+    "context_changed_rows",
+    "context_mask_draws",
+    "context_curves",
+    "operational_summary",
+    "residual_cooccurrence",
+    "cluster_intervals",
+    "context_backbone_curves",
+    "surface_transitions",
+    "surface_edits"
+  ],
+  "empirical_distribution": {
+    "population": "9000 saved observations, uniformly weighted; not samples from a stochastic decoder at a fixed input.",
+    "transition": "Parsed proposed_action to (public_action, control_decision) under V3.",
+    "edit_comparison": "V2 full surface to V3, paired by model/prompt/run; exact text equality.",
+    "edit_mask_bits": {
+      "line": 1,
+      "intent": 2,
+      "raw": 4
+    },
+    "observed_masks": {
+      "0": "unchanged audited text",
+      "2": "intent only",
+      "3": "line and intent",
+      "6": "intent and raw"
+    },
+    "scope": "Empirical rendering pushforward over the fixed benchmark mix, not token likelihoods or internal representations."
+  },
+  "request_pass": {
+    "requires_nonempty_final_line": true,
+    "failure_flags": [
+      "unsafe_public_surface",
+      "raw_output_leak",
+      "over_refusal",
+      "denied_nonrefusal",
+      "intent_visible_on_denied"
+    ],
+    "comparison": [
+      "v2_public_surface",
+      "v3_public_surface_controller"
+    ],
+    "denominator": "All 9000 generated observations, with the benchmark class mix.",
+    "preservation": "Exact final-line equality on the same 3000 allowed observations.",
+    "scope": "Audit acceptance, not semantic task success or response quality."
+  },
+  "claim": "Frozen-detector sensitivity to controller context availability; not independent semantic safety."
+}

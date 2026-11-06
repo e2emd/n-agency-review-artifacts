@@ -1,0 +1,7 @@
+model,n,final,raw_only,intent_only,total,missed_pct_flags,audit_gap_pct_all,final_prompts,raw_only_prompts,intent_only_prompts
+Gemma2 2B Q8,1800,3,0,0,3,0.0,0.0,1,0,0
+Qwen2.5 7B,1800,63,0,0,63,0.0,0.0,21,0,0
+Llama3.1 8B,1800,3,0,3,6,50.0,0.166667,1,0,1
+Mistral 7B,1800,21,18,0,39,46.153846,1.0,7,6,0
+Gemma2 9B,1800,0,0,0,0,,0.0,0,0,0
+ALL,9000,90,18,3,111,18.91891891891892,0.23333333333333334,30,6,1
