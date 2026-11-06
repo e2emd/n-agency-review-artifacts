@@ -2,7 +2,7 @@
 
 **Auditing the Public Surface of User-Facing LLM Agents**
 
-[Project page](docs/index.html) | [Experiment code](research/)
+[Project page](https://anonymous.4open.science/w/n-agency-review-artifacts-1506/) | [Paper](docs/assets/paper.pdf) | [Experiment code](research/)
 
 N/Agency++ separates model proposals, permission decisions, and rendered public
 fields through Permissioned Action Generation (PAG). This release contains the
